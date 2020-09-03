@@ -22,8 +22,10 @@ connection.once('open', () => {
 
 //Routing 
 const donationsRouter = require('./routes/donations');
+const requestsRouter = require('./routes/requests');
 
 app.use('/donate', donationsRouter);
+app.use('/request', requestsRouter);
 
 //Listen
 app.listen(port, () => {
